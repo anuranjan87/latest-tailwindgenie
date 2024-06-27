@@ -159,7 +159,7 @@ export default function MyPage() {
   useEffect(() => {
     const createThread = async () => {
       try {
-        const openai = new OpenAI({apiKey: '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' || '', dangerouslyAllowBrowser: true });
+        const openai = new OpenAI({apiKey: 'sk-proj-Rw5cfguNZkluGx94oxQIT3BlbkFJOckuea5QLNP2MD08Niyq' || '', dangerouslyAllowBrowser: true });
 
         const threadI = await openai.beta.threads.create({
 
