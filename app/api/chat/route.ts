@@ -18,7 +18,7 @@ interface CreatedMessage {
 
 // Create an OpenAI API client (that's edge friendly!)
 const openai = new OpenAI({
-  apiKey: 'sk-proj-Rw5cfguNZkluGx94oxQIT3BlbkFJOckuea5QLNP2MD08Niyq' || '',
+  apiKey: process.env.NEXT_PUBLIC_API_KEY|| '',
 });
 
 // IMPORTANT! Set the runtime to edge

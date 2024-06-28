@@ -21,6 +21,7 @@ import Modal from '../components/modal';
 import React from 'react';
 import  { useAssistant } from "ai/react"
 import { useCompletion } from "ai/react"
+
 import OpenAI from 'openai';
 
 
@@ -88,7 +89,6 @@ export default function MyPage() {
     api: '/api/chat',
     threadId: threadId,
     body: {
-      model: selectedModel,
       content: scontent,
       id: vectorStoreId,
     },
@@ -153,13 +153,12 @@ export default function MyPage() {
     console.log("Vector Store ID received:"); // Added console log for debugging
   };
 
-  console.log(vectorStoreId);
-
+  console.log(process.env.NEXT_PUBLIC_API_KEY )
 
   useEffect(() => {
     const createThread = async () => {
       try {
-        const openai = new OpenAI({apiKey: 'sk-proj-Rw5cfguNZkluGx94oxQIT3BlbkFJOckuea5QLNP2MD08Niyq' || '', dangerouslyAllowBrowser: true });
+        const openai = new OpenAI({apiKey: process.env.NEXT_PUBLIC_API_KEY || '', dangerouslyAllowBrowser: true });
 
         const threadI = await openai.beta.threads.create({
 
@@ -309,7 +308,7 @@ console.log("pp")
             <div className="flex flex-col justify-center items-center space-y-4 border-t border-gray-200 bg-gray-50 p-7 sm:p-10">
             
             {examples.map((example, i) => (
-              <a className="relative w-full" href="#" key={i}>
+              <a className="relative w-full" href="#">
         <span className="absolute top-0 left-0 mt-1 ml-1 h-full w-full rounded bg-gray-600"></span>
               <button
                 key={i}
