@@ -308,7 +308,7 @@ console.log("pp")
             <div className="flex flex-col justify-center items-center space-y-4 border-t border-gray-200 bg-gray-50 p-7 sm:p-10">
             
             {examples.map((example, i) => (
-              <a className="relative w-full" href="#">
+              <a key={i} className="relative w-full" href="#">
         <span className="absolute top-0 left-0 mt-1 ml-1 h-full w-full rounded bg-gray-600"></span>
               <button
                 key={i}

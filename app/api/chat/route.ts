@@ -39,7 +39,8 @@ export async function POST(req: Request, res: NextApiResponse) {
   const fullMessage = `${tailwindCSSLink}\n${message}`;
   
   const threadI = threadId;
-  console.log(threadI);
+
+  console.log(process.env.NEXT_PUBLIC_API_KEY);
 
   let createdMessage: CreatedMessage;
   if (id) {
