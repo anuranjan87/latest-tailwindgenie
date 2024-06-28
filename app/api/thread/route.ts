@@ -1,18 +1,16 @@
-// pages/api/thread.ts
-import { NextApiRequest, NextApiResponse } from 'next';
+// app/api/thread/route.ts
+import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 
-const createThread = async (req: NextApiRequest, res: NextApiResponse) => {
+export async function POST(req: NextRequest) {
   try {
     const openai = new OpenAI({ apiKey: process.env.NEXT_PUBLIC_API_KEY || '', dangerouslyAllowBrowser: true });
 
     const threadI = await openai.beta.threads.create({});
 
-    res.status(200).json({ threadId: threadI.id });
+    return NextResponse.json({ threadId: threadI.id }, { status: 200 });
   } catch (error) {
     console.error('Error creating thread:', error);
-    res.status(500).json({ error: 'Error creating thread' });
+    return NextResponse.json({ error: 'Error creating thread' }, { status: 500 });
   }
-};
-
-export default createThread;
+}

@@ -54,7 +54,7 @@ function New() {
                 How much does it cost?
               </h1>
               <p className="mb-2 text-lg">
-                It's free for individual users. Enterprise can check <a href='/company' className='text-blue-700' target="_blank">pricing plans</a>.
+                It is free for individual users. Enterprise can check our <a href='/company' className='text-blue-700' target="_blank">pricing plans</a>.
               </p>
               <h1 className="mb-4 mt-14 text-3xl font-bold tracking-tighter">
                 What data was Tailwind-Genie trained on?
