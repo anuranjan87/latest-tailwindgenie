@@ -158,18 +158,23 @@ export default function MyPage() {
   useEffect(() => {
     const createThread = async () => {
       try {
-        const openai = new OpenAI({apiKey: process.env.NEXT_PUBLIC_API_KEY || '', dangerouslyAllowBrowser: true });
-
-        const threadI = await openai.beta.threads.create({
-
+        const response = await fetch('/api/thread', {
+          method: 'POST',
         });
-        setThreadId(threadI.id); // assuming threadI has an id property
-        console.log(threadI.id); // Log the new thread ID
-        console.log("hello");
+
+        if (!response.ok) {
+          throw new Error('Failed to create thread');
+        }
+
+        const data = await response.json();
+        setThreadId(data.threadId);
+        console.log(data.threadId); // Log the new thread ID
+        console.log('hello');
       } catch (error) {
         console.error('Error creating thread:', error);
       }
     };
+
     createThread();
   }, []);
 console.log(threadId)
