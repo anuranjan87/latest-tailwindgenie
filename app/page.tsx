@@ -78,7 +78,15 @@ export default function MyPage() {
   const [Open, setOpen] = useState(false);
   const [vectorStoreId, setVectorStoreId] = useState<string | null>(null);
   const [threadId, setThreadId] = useState<string | undefined>(undefined);
+  const [iframeWidth, setIframeWidth] = useState('100%');
 
+  // Function to change the iframe width to 50%
+  const handleChangeWidth = () => {
+    setIframeWidth('50%');
+  };
+  const handleChangeWidthd = () => {
+    setIframeWidth('100%');
+  };
 
 
  
@@ -211,7 +219,6 @@ console.log("pp")
                   alt="Shakespeare"
                   width={36}
                   height={36}
-                  className="border-black border"
 
                 />
                 ) : (
@@ -220,7 +227,6 @@ console.log("pp")
                     alt="Shakespeare"
                     width={36}
                     height={36}
-                    className="border-black border"
 
                   />
                 )}
@@ -239,17 +245,24 @@ console.log("pp")
                 <>
                  <div className="flex justify-end mb-6 px-6 font-extrabold text-sm">
                  <div className="flex justify-end m-r-auto bg-[#2eb8b8]" id="buttons_container">
-  <button className="text-gray-200 px-6 py-2 bg-white text-xl font-mono border-r-2 hover:text-slate-50"
+
+
+    
+
+
+    <button onClick={handleChangeWidthd} className="text-gray-200 px-2 py-1 text-m font-mono border-r-2 hover:text-slate-50 "
         >
-        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="size-5">
+  <path fillRule="evenodd" d="M2 4.25A2.25 2.25 0 0 1 4.25 2h7.5A2.25 2.25 0 0 1 14 4.25v5.5A2.25 2.25 0 0 1 11.75 12h-1.312c.1.128.21.248.328.36a.75.75 0 0 1 .234.545v.345a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75v-.345a.75.75 0 0 1 .234-.545c.118-.111.228-.232.328-.36H4.25A2.25 2.25 0 0 1 2 9.75v-5.5Zm2.25-.75a.75.75 0 0 0-.75.75v4.5c0 .414.336.75.75.75h7.5a.75.75 0 0 0 .75-.75v-4.5a.75.75 0 0 0-.75-.75h-7.5Z" clipRule="evenodd" />
+</svg>
     </button>
-    <button className="text-gray-200 px-2 py-1 text-m font-mono border-r-2 hover:text-slate-50 "
+    <button onClick={handleChangeWidth} className="text-gray-200 px-2 py-1 text-m font-mono border-r-2 hover:text-slate-50"
         >
-        MV
-    </button>
-    <button className="text-gray-200 px-2 py-1 text-m font-mono border-r-2 hover:text-slate-50"
-        >
-        DV
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="size-5">
+  <path d="M7.25 11.5a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5h-1.5Z" />
+  <path fillRule="evenodd" d="M6 1a2.5 2.5 0 0 0-2.5 2.5v9A2.5 2.5 0 0 0 6 15h4a2.5 2.5 0 0 0 2.5-2.5v-9A2.5 2.5 0 0 0 10 1H6Zm4 1.5h-.5V3a.5.5 0 0 1-.5.5H7a.5.5 0 0 1-.5-.5v-.5H6a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1Z" clipRule="evenodd" />
+</svg>
+
     </button></div>
                  </div>
   <div className="mt-2">
@@ -258,7 +271,8 @@ console.log("pp")
   title="Rendered Content"
   srcDoc={message.content}
   sandbox="allow-scripts allow-same-origin allow-top-navigation"
-  className="w-full mx-auto outline-dashed mx-0"
+  style={{"width" : iframeWidth}}
+  className="mx-auto outline-dashed mx-0 rounded-md "
   onLoad={(e) => {
     const iframe = e.target as HTMLIFrameElement;
     iframe.style.height = `${iframe.contentWindow?.document.documentElement.scrollHeight}px`;
@@ -296,19 +310,19 @@ console.log("pp")
           
         ))
       ) : (
-        <div className="border-gray-200sm:mx-0 mx-5 mt-16 max-w-screen-md shadow-md rounded-md border sm:w-full">
-          <div className="flex flex-col space-y-3 p-1 sm:p-10">
+        <div className="border-gray-200 sm:mx-0 mx-5 mt-16 lg:mt-6 max-w-screen-sm shadow-md rounded-md border sm:w-full">
+          <div className="flex flex-col space-y-3  p-0 sm:p-10">
           <div className="mb-0">
     
     <a href="https://ibb.co/zFvz1FN">
       <img src="https://i.ibb.co/xYTNyY3/New-Project.png" alt="New-Project" className="w-72 mx-auto transition-opacity duration-300 hover:opacity-80" />
     </a>
   </div>
-  <p className="text-gray-500 p-4 font-light text-lg text-center">
+  <p className="text-gray-500 p-6 lg:p-0 font-light text-lg lg:text-md text-center">
     Create elegant and sophisticated components<br />in just a few prompts. #DesignLife
   </p>
   <div className="mx-auto">
-      <iframe src="https://giphy.com/embed/lPXAITlh8rQZNRLB1l" width="200" height="200"  className="giphy-embed" allowFullScreen></iframe>
+      <iframe src="https://giphy.com/embed/lPXAITlh8rQZNRLB1l" width="200" height="200"  className="giphy-embed mt-1" allowFullScreen></iframe>
     </div>
             <div className="flex flex-col justify-center items-center space-y-4 border-t border-gray-200 bg-gray-50 p-7 sm:p-10">
             

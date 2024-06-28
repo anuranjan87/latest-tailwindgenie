@@ -82,6 +82,9 @@ function New() {
           </div>
         </div>
       </div>
+      <p className='mt-6 font-light flex justify-center font-md mb-4'>
+connect anuranjan@fine-tune-ai.com for any issues
+      </p>
     </>
   );
 }
