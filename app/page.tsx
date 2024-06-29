@@ -142,8 +142,8 @@ export default function MyPage() {
 
   const examples = [
     "Sign out button",
-    "Hero section for tailwind",
-    "Clone facebook news feed",
+    "Netflix langing page clone",
+    "Google Maps location screen",
   ];
   
   const handleopen = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -337,11 +337,11 @@ console.log("pp")
         if (example === "Sign out button") {
           modifiedExample = "Sign out button";
         }
-        else if (example === "Hero section for tailwind") {
-          modifiedExample = "Hero section for tailwind";
+        else if (example === "Netflix landing page clone") {
+          modifiedExample = "Clone netflix landing page";
         }
-        else if (example === "Clone facebook news feed") {
-          modifiedExample = "Clone facebook news feed";
+        else if (example === "Google Maps location screen") {
+          modifiedExample = "Google Maps location screen";
         }
                   setInput(modifiedExample);
                   inputRef.current?.focus();

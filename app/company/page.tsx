@@ -44,13 +44,13 @@ function New() {
       <div className='flex justify-center mt-12'>
         <div className="max-w-sm flex flex-col rounded-3xl bg-white dark:bg-gray-950 shadow-xl ring-1 ring-black/10">
           <div className="p-8 sm:p-10">
-            <h3 id="tier-basic" className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">Enterprise</h3>
+            <h3 id="tier-basic" className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">Enterprise Pro</h3>
             <div className="mt-4 flex items-baseline text-5xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
               <span>$250</span>
               <span className="text-lg font-semibold leading-8 tracking-normal text-gray-500">/mo</span>
             </div>
             <p className="mt-4 text-base leading-7 text-gray-600 dark:text-slate-200">
-              Perfect starting point for Enterprise users. Join now to get a taste of all the features &amp; benefits that Subtxt has to offer.
+              Perfect starting point for Enterprise users. Join now to get a taste of all the features &amp; benefits.
             </p>
           </div>
           <div className="flex flex-1 flex-col p-2">
@@ -59,13 +59,11 @@ function New() {
                 <li className="flex items-start">
                   <p className="ml-3 text-sm leading-6 text-gray-600 dark:text-gray-300">
                     550+ Unique Story Structures
+
+
                   </p>
                 </li>
-                <li className="flex items-start">
-                  <p className="ml-3 text-sm leading-6 text-gray-600 dark:text-gray-300">
-                    100 AI Tokens/Month
-                  </p>
-                </li>
+                
                 <li className="flex items-start">
                   <p className="ml-3 text-sm leading-6 text-gray-600 dark:text-gray-300">
                     Unlimited AI Assistance

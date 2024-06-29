@@ -54,12 +54,12 @@ const Modal: React.FC<ModalProps> = ({ onClose, onVectorStoreCreated }) => {
     formData.append('purpose', 'vision');
     formData.append('file', file);
 
-    try {
-      const uploadResponse = await fetch('https://api.openai.com/v1/files', {
-        method: 'POST',
-        headers: { 'Authorization': 'Bearer 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' },
-        body: formData,
-      });
+      try {
+        const uploadResponse = await fetch('https://api.openai.com/v1/files', {
+          method: 'POST',
+          headers: { 'Authorization': `Bearer ${process.env.NEXT_PUBLIC_API_KEY}` },
+          body: formData,
+        });
 
       if (uploadResponse.ok) {
         const { id } = await uploadResponse.json();

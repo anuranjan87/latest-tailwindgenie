@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nanostores/react": "github:ai/react",
+    "@next/third-parties": "^14.2.4",
     "ai": "^3.2.11",
     "ajv": "^8.16.0",
     "amqplib": "^0.9.1",

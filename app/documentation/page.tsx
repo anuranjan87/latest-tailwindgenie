@@ -44,7 +44,7 @@ function New() {
                   Tailwind-Genie uses AI models to generate code based on simple text prompts.
                 </li>
                 <li className='mb-4 text-lg'>
-                  After you submit your prompt, we give you AI generate codes as well rendered user interface. You can choose one and copy paste its code, or refine it further.
+                  After you submit your prompt, we give you AI generate codes. You can choose to copy paste its code, or refine it further.
                 </li>
                 <li className='mb-4 text-lg'>
                   Tailwind Genie not only provides the generated code but also renders a live preview of the user interface component. This allows users to see how the component will look and behave directly within the Tailwind Genie interface.
@@ -54,7 +54,7 @@ function New() {
                 How much does it cost?
               </h1>
               <p className="mb-2 text-lg">
-                It is free for individual users. Enterprise can check our <a href='/company' className='text-blue-700' target="_blank">pricing plans</a>.
+                It is free for individual users. Enterprise users can check our <a href='/company' className='text-blue-700' target="_blank">pricing plans</a>.
               </p>
               <h1 className="mb-4 mt-14 text-3xl font-bold tracking-tighter">
                 What data was Tailwind-Genie trained on?
