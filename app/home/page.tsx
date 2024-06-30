@@ -103,7 +103,7 @@ export default function Home() {
     </div>
     <div className="bg-white p-6 rounded-m border-dashed border-2  shadow-md hover:shadow-lg">
       <h1 className="lg:text-2xl text-xl font-bold text-gray-800 mb-4">Iteration Speed</h1>
-      <p className="text-base lg:text-md text-sm text-gray-600 ">Our platform makes creating and iterating on prototypes 80% faster. For simple queries, we respond in about 2 seconds, compared to ChatGPT's 10 seconds. Additionally, you can see a live preview of the code, saving even more time.</p>
+      <p className="text-base lg:text-md text-sm text-gray-600 ">Our platform makes creating and iterating on prototypes 80% faster. For simple queries, we respond in about 2 seconds, compared to ChatGPT 10 seconds. Additionally, you can see a live preview of the code, saving even more time.</p>
     </div>
     <div className="bg-white p-6 rounded-m border-dashed border-2  shadow-md hover:shadow-lg">
       <h1 className="lg:text-2xl text-xl font-bold text-gray-800 mb-4">Handling Different Screen Sizes</h1>
@@ -153,16 +153,16 @@ export default function Home() {
     <div className="bg-white p-6 rounded-m border-dashed border-2 mx-auto my-auto shadow-md hover:shadow-lg">
     
       <p className=" text-gray-600 font-bold text-center">Enrich user prompt before processing.</p>
-      <p className=" text-gray-600 text-sm italic text-center mt-2">"After user enters the prompt we add additional information to yeild better results"</p>
+      <p className=" text-gray-600 text-sm italic text-center mt-2">After user enters the prompt we add additional information to yeild better results</p>
 
     </div>
     <div className="bg-white p-6 rounded-m border-dashed border-2 mx-auto my-auto  shadow-md hover:shadow-lg">
       <h1 className="text-md font-bold text-gray-800 text-center">Use AI model</h1>
-      <p className=" text-gray-600 text-sm italic text-center mt-2">"We use  GPT-3.5 custom fine-tune model for generating responses, <a href='https://fine-tune-ai.com/' className="text-blue-700">fine-tune-ai.com"</a></p>
+      <p className=" text-gray-600 text-sm italic text-center mt-2">We use  GPT-3.5 custom fine-tune model for generating responses, <a href='https://fine-tune-ai.com/' className="text-blue-700">fine-tune-ai.com</a></p>
     </div>
     <div className="bg-white p-6 rounded-m border-dashed border-2 mx-auto my-auto  shadow-md hover:shadow-lg">
       <h1 className="text-md font-bold text-gray-800 text-center">Stream response</h1>
-      <p className=" text-gray-600 text-sm italic text-center mt-2">"We ensure that the UI performs well without lag or slowdowns is critical for user satisfaction"</p>
+      <p className=" text-gray-600 text-sm italic text-center mt-2">We ensure that the UI performs well without lag or slowdowns is critical for user satisfaction</p>
     </div>
 </div>
 <div className="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
