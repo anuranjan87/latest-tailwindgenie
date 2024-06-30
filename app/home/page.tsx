@@ -119,8 +119,8 @@ export default function Home() {
   <div className="flex h-screen items-center justify-center bg-gray-900 p-7">
     <div className="grid md:grid-cols-2 grid-cols-1 items-center  md:px-10">
       <div className='order-last md:order-first'>
-        <h1 className="mb-2 text-3xl text-center md:text-left font-bold text-white"><span className="text-green-500">Hi,</span> I'm Full Stack Developer...</h1>
-        <p className="mb-6 text-white p-4 lg:p-0">As a software engineer at Apple, I use this tool almost every day. Honestly, I can't imagine going back to our old workflow without this tool. It's just awesome!</p>
+        <h1 className="mb-2 text-3xl text-center md:text-left font-bold text-white"><span className="text-green-500">Hi,</span> I&#39;m Full Stack Developer...</h1>
+        <p className="mb-6 text-white p-4 lg:p-0">As a software engineer at Apple, I use this tool almost every day. Honestly, I can&apos;t imagine going back to our old workflow without this tool. It&apos;s just awesome!</p>
         <div className="flex justify-center space-x-5">
           <button onClick={linkedin} className=" flex w-full items-center justify-center gap-1 rounded-2xl bg-rose-500 p-5 py-3 font-semibold text-white hover:bg-rose-700">
             Follow
