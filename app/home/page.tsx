@@ -27,7 +27,7 @@ export default function Home() {
           <div className="flex w-full mx-auto text-left">
             <div className="relative inline-flex items-center mx-auto align-middle">
               <div className="text-center">
-                <h1 className="max-w-5xl text-4xl font-black leading-none tracking-tighter text-neutral-600 md:text-5xl lg:text-6xl lg:max-w-7xl">
+                <h1 className="max-w-5xl text-3xl font-black leading-none tracking-tighter text-neutral-600 md:text-5xl lg:text-6xl lg:max-w-7xl">
                 Backend Developers become <br className="block" />
                 Full-Stack Pros with <p className='text-[#2eb8b8]'>Tailwind Genie.    </p>            </h1>
                
@@ -51,12 +51,12 @@ export default function Home() {
       <section className="flex flex-col md:flex-row justify-between items-center h-screen bg-white">
       <div className="relative inline-flex items-center mx-auto align-middle">
 
-  <div className="max-w-lg p-6">
-    <h1 className="mt-6 lg:text-6xl  text-5xl font-black leading-none tracking-tighter text-neutral-600  mb-4 text-center lg:text-left">Instant <p className='text-[#2eb8b8]'>Magic!</p></h1>
+  <div className="max-w-lg lg:p-6 p-0">
+    <h1 className="mt-6 lg:text-6xl  text-5xl font-black leading-none tracking-tighter text-neutral-600 text-center lg:text-left">Instant <p className='text-[#2eb8b8]'>Magic!</p></h1>
     <p className='text-center lg:text-left'>Generate UI using prompt</p>
   </div></div>
 
-  <div className="lg:max-w-xl max-w-md p-7 mx-auto justify-between items-center">
+  <div className="lg:max-w-xl max-w-xs mx-auto justify-between items-center">
       <video className="w-full h-auto rounded-lg shadow-lg mt-2" autoPlay loop muted>
         <source src="/nww.mp4" type="video/mp4" />
       </video>
