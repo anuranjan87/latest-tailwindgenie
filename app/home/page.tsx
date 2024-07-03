@@ -34,7 +34,7 @@ export default function Home() {
                 <div className="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
                   
                   <div className=" rounded-lg sm:mt-0 sm:ml-3">
-                  <button className="bg-gradient-to-r from-blue-500 to-red-500 text-white px-10 py-2 text-md lg:text-xl text-sm rounded font-bold focus:ring ring-black ring-opacity-10 gradient element-to-rotate">Start</button>
+                  <a href="/"><button className="bg-gradient-to-r from-blue-500 to-red-500 text-white px-10 py-2 lg:text-xl text-sm rounded font-bold focus:ring ring-black ring-opacity-10 gradient element-to-rotate">Try Free</button></a>
                   </div>
                 </div>
                 
@@ -168,7 +168,7 @@ export default function Home() {
 <div className="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
                   
                   <div className="mt-3 rounded-lg sm:mt-0 sm:ml-3">
-                  <button className="bg-gradient-to-r from-blue-500 to-red-500 text-white px-10 py-2 lg:text-xl text-sm rounded font-bold focus:ring ring-black ring-opacity-10 gradient element-to-rotate">Start</button>
+                  <a href="/"><button className="bg-gradient-to-r from-blue-500 to-red-500 text-white px-10 py-2 lg:text-xl text-sm rounded font-bold focus:ring ring-black ring-opacity-10 gradient element-to-rotate">Try Free</button></a>
                   </div>
                 </div>
 

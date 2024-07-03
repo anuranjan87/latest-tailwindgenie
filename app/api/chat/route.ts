@@ -22,7 +22,6 @@ const openai = new OpenAI({
 });
 
 // IMPORTANT! Set the runtime to edge
-export const runtime = 'edge';
 
 export async function POST(req: Request, res: NextApiResponse) {
   // Extract the `prompt` from the body of the request
