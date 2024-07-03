@@ -15,7 +15,7 @@ export default function Header()  {
         <div className="flex items-center justify-between">
             <div className="flex shrink-0">
                 <a aria-current="page" className="flex items-center" href="/home">
-                    <img className="h-5 w-auto" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt=""></img>
+                    <img className="h-7 w-auto" src="logot.png" alt=""></img>
                     <p className="sr-only">Website Title</p>
                 </a>
             </div>

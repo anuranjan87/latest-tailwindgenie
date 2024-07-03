@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 .zoom {
-    -webkit-transform: scale(2); /* Safari and Chrome */
+    -webkit-transform: scale(8); /* Safari and Chrome */
     transform: scale(2); /* zoom factor - prefix if needed */
     width: 200px; /* half of iframe width */
     height: auto; /* half of iframe height */
     margin: 100px 0 0 100px; /* reposition iframe */
-    overflow: hidden; /* remove big-ass scrollbars */
+     /* remove big-ass scrollbars */
   }

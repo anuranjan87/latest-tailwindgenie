@@ -23,7 +23,7 @@ import { useAssistant } from "ai/react";
 import OpenAI from 'openai';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
-import 'prismjs/components/prism-markup';
+
 
 
 
@@ -237,7 +237,7 @@ const MyPage: React.FC = () => {
                               srcDoc={message.content}
                               sandbox="allow-scripts allow-same-origin allow-top-navigation"
                               style={{ width: iframeWidth }}
-                              className="{styles.zoom} mx-auto outline-dashed mx-0 transform scale-100 rounded-md "
+                              className="{styles.zoom} mx-auto outline-dotted transform scale-100  rounded-xl overflow-x-auto bg:black"
                               onLoad={(e) => {
                                 const iframe = e.target as HTMLIFrameElement;
                                 iframe.style.height = `${iframe.contentWindow?.document.documentElement.scrollHeight}px`;
@@ -247,26 +247,10 @@ const MyPage: React.FC = () => {
                         </div>
                         <div className="relative max-w-2xl mx-auto mt-4">
                           <div className="">
-                            <div className="flex justify-between items-center mb-2">
-                              <span className="">Code: CSS</span>
-                              <button onClick={handleCopy} className="code bg-gray-800 hover:bg-gray-700 text-gray-300 px-3 py-1 rounded-md" data-clipboard-target="#code">
-                                Copy
-                              </button>
-                            </div>
-                            <pre>
-        <code className="language-markup">
-{`<!DOCTYPE html>
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Code Syntax Highlighter</title>
-</head>
-<body>
-    <h1>Hello, World!</h1>
-</body>
-</html>`}
+                            <button className="font-bold text-sm text-end">copy</button>
+                           
+                            <pre className="language-markup border-2 border-dotted border-black p-4 rounded-xl overflow-x-auto ">
+        <code className="language-markup" >{message.content}
            </code>
          </pre>
                           </div>
