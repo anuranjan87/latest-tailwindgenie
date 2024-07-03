@@ -8,9 +8,9 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "FINE-TUNE AI – Generate fine tune data set using prompt",
+  title: "Tailwind Gennie– Generative UI",
   description:
-    "Generate fine tune data set using prompt."
+    "Generate UI using prompt."
 }
 
 export default function RootLayout({
@@ -24,6 +24,8 @@ export default function RootLayout({
         {/* Other head elements... */}
         {/* Google Analytics Tracking Code */}
         <GoogleAnalytics gaId="G-ZH37SY7SDF" />
+        <link rel="icon" href="/logot.png" type="image/x-icon" />
+
       </head>
       <body className={inter.className}>
         {children}
