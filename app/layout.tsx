@@ -26,8 +26,10 @@ export default function RootLayout({
         <GoogleAnalytics gaId="G-ZH37SY7SDF" />
         <link rel="icon" href="/logot.png" type="image/x-icon" />
 
+
       </head>
       <body className={inter.className}>
+        
         {children}
       </body>
     </html>

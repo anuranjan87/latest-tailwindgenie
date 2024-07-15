@@ -72,6 +72,8 @@ const MyPage: React.FC = () => {
   const [vectorStoreId, setVectorStoreId] = useState<string | null>(null);
   const [threadId, setThreadId] = useState<string | undefined>(undefined);
   const [iframeWidth, setIframeWidth] = useState('100%');
+  const [toggle, setToggle] = useState(false);
+
 
   const handleChangeWidth = () => {
     setIframeWidth('70%');
@@ -214,24 +216,14 @@ const MyPage: React.FC = () => {
                     ) : (
                       <>
                         {Oopen && <Screenfull onClose={() => { setOopen(false) }} onVectorStoreCreated={message.content} />}
-                        <div className="flex justify-end mb-6 px-6 font-extrabold text-sm">
-                          <button onClick={fullscreen} className="bg-white px-4">FullScreen</button>
-                          <div className="flex justify-end m-r-auto bg-[#2eb8b8]" id="buttons_container">
-                            <button onClick={handleChangeWidthd} className="text-gray-200 px-2 py-1 text-m font-mono border-r-2 hover:text-slate-50 ">
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="size-5">
-                                <path fillRule="evenodd" d="M2 4.25A2.25 2.25 0 0 1 4.25 2h7.5A2.25 2.25 0 0 1 14 4.25v5.5A2.25 2.25 0 0 1 11.75 12h-1.312c.1.128.21.248.328.36a.75.75 0 0 1 .234.545v.345a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75v-.345a.75.75 0 0 1 .234-.545c.118-.111.228-.232.328-.36H4.25A2.25 2.25 0 0 1 2 9.75v-5.5Zm2.25-.75a.75.75 0 0 0-.75.75v4.5c0 .414.336.75.75.75h7.5a.75.75 0 0 0 .75-.75v-4.5a.75.75 0 0 0-.75-.75h-7.5Z" clipRule="evenodd" />
-                              </svg>
-                            </button>
-                            <button onClick={handleChangeWidth} className="text-gray-200 px-2 py-1 text-m font-mono border-r-2 hover:text-slate-50">
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="size-5">
-                                <path d="M7.25 11.5a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5h-1.5Z" />
-                                <path fillRule="evenodd" d="M6 1a2.5 2.5 0 0 0-2.5 2.5v9A2.5 2.5 0 0 0 6 15h4a2.5 2.5 0 0 0 2.5-2.5v-9A2.5 2.5 0 0 0 10 1H6Zm4 1.5h-.5V3a.5.5 0 0 1-.5.5H7a.5.5 0 0 1-.5-.5v-.5H6a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1Z" clipRule="evenodd" />
-                              </svg>
-                            </button>
-                          </div>
+                        <div className="flex justify-end lg:mr-7 font-extrabold text-xs">
+                          <button onClick={fullscreen}>FullScreen</button>
+                           
+                          
                         </div>
+                        
                         <div className="mt-2">
-                          <div className="lg:p-6">
+                          <div className=" lg:px-5">
                             <iframe
                               title="Rendered Content"
                               srcDoc={message.content}
@@ -247,12 +239,35 @@ const MyPage: React.FC = () => {
                         </div>
                         <div className="relative max-w-2xl mx-auto mt-4">
                           <div className="">
-                            <button className="font-bold text-sm text-end">copy</button>
                            
-                            <pre className="language-markup border-2 border-dotted border-black p-4 rounded-xl overflow-x-auto ">
-        <code className="language-markup" >{message.content}
-           </code>
-         </pre>
+                           <button type="button" className="py-1.5 px-4 text-xs font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100" onClick={()=>setToggle(!toggle)}>{toggle ? "Switch to CSS" : "Switch to React"}</button>
+
+
+                         
+                         
+                           <div className="relative max-w-2xl mx-auto mt-2">
+    <div className="bg-gray-900 text-white p-4 rounded-xl">
+        <div className="flex justify-between items-center mb-2">
+            <span className="text-gray-400 text-xs">Code:</span>
+            <button className=" bg-gray-800 text-xs hover:bg-gray-700 text-gray-300 px-3 py-1 rounded-md" onClick={handleCopy}>
+        Copy
+      </button>
+        </div>
+        
+        <div className="overflow-x-auto">
+            <pre ref={codeRef}  className="text-gray-300">
+        <code className="text-sm">{toggle ? message.content.replace(/class="/g, 'className="')
+        .replace(/<!--/g, '{/*').replace(/-->/g, '*/}')
+        .replace(/<link href="https:\/\/cdn\.jsdelivr\.net\/npm\/tailwindcss@2\.2\.19\/dist\/tailwind\.min\.css" rel="stylesheet">/g, '') : message.content}
+          </code>
+
+</pre>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+
                           </div>
                         </div>
                       </>
