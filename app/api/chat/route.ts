@@ -22,12 +22,13 @@ const openai = new OpenAI({
 });
 
 // IMPORTANT! Set the runtime to edge
-
+export const maxDuration = 50;
 export async function POST(req: Request, res: NextApiResponse) {
   // Extract the `prompt` from the body of the request
   const { message, model, content, id, threadId } = await req.json();
   console.log(threadId);
   console.log(id);
+  
 
   let tailwindCSSLink: string;
   if (id) {
