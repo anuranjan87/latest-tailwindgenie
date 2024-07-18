@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import * as React from 'react'
+import { Analytics } from "@vercel/analytics/react"
 
 import { GoogleAnalytics } from '@next/third-parties/google'
 
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className={inter.className}>
         
         {children}
+        <Analytics />
       </body>
     </html>
   )
