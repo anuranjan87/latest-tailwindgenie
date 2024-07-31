@@ -34,7 +34,7 @@ export async function POST(req: Request, res: NextApiResponse) {
   if (id) {
     tailwindCSSLink = 'use uploaded image, Output only the tailwind cdn code and HTML code without Markdown syntax or additional formatting, hover effect. Add comments also in the code. All designs should be elegant and impressive';
   } else {
-    tailwindCSSLink = 'Output only the tailwind cdn code and HTML code without Markdown syntax or additional formatting, hover effect. Add comments also in the code. All designs should be elegant and impressive create hero section for tradin app';
+    tailwindCSSLink = 'Output only the tailwind cdn code and HTML code without Markdown syntax or additional formatting, hover effect. Add comments also in the code. All designs should be elegant and impressive';
   }
   const fullMessage = `${tailwindCSSLink}\n${message}`;
   
