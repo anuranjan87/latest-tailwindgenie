@@ -229,7 +229,7 @@ const MyPage: React.FC = () => {
                               srcDoc={message.content}
                               sandbox="allow-scripts allow-same-origin allow-top-navigation"
                               style={{ width: iframeWidth }}
-                              className="{styles.zoom} mx-auto outline-dotted transform scale-100  rounded-xl overflow-x-auto bg:black"
+                              className="  outline-dotted rounded-xl  bg:black"
                               onLoad={(e) => {
                                 const iframe = e.target as HTMLIFrameElement;
                                 iframe.style.height = `${iframe.contentWindow?.document.documentElement.scrollHeight}px`;
@@ -256,10 +256,16 @@ const MyPage: React.FC = () => {
         
         <div className="overflow-x-auto">
             <pre ref={codeRef}  className="text-gray-300">
-        <code className="text-sm">{toggle ? message.content.replace(/class="/g, 'className="')
-        .replace(/<!--/g, '{/*').replace(/-->/g, '*/}')
-        .replace(/<link href="https:\/\/cdn\.jsdelivr\.net\/npm\/tailwindcss@2\.2\.19\/dist\/tailwind\.min\.css" rel="stylesheet">/g, '') : message.content}
-          </code>
+            <code className="text-sm">
+        {toggle ? `return( 
+        <> ${message.content
+          .replace(/class="/g, 'className="')
+          .replace(/<!--/g, '{/*').replace(/-->/g, '*/}')
+          .replace(/<img([^>]+)>/g, '<img$1 />')
+          .replace(/<input([^>]+)>/g, '<input$1 />')
+          .replace(/<link href="https:\/\/cdn\.jsdelivr\.net\/npm\/tailwindcss@2\.2\.19\/dist\/tailwind\.min\.css" rel="stylesheet">/g, '')} </>)`
+        : message.content}
+      </code>
 
 </pre>
         </div>

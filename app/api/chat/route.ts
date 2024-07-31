@@ -34,7 +34,7 @@ export async function POST(req: Request, res: NextApiResponse) {
   if (id) {
     tailwindCSSLink = 'use uploaded image, Output only the tailwind cdn code and HTML code without Markdown syntax or additional formatting, hover effect. Add comments also in the code. All designs should be elegant and impressive';
   } else {
-    tailwindCSSLink = 'Output only the tailwind cdn code and HTML code without Markdown syntax or additional formatting, hover effect. Add comments also in the code. All designs should be elegant and impressive';
+    tailwindCSSLink = 'Output only the tailwind cdn code and HTML code without Markdown syntax or additional formatting, hover effect. Add comments also in the code. All designs should be elegant and impressive create hero section for tradin app';
   }
   const fullMessage = `${tailwindCSSLink}\n${message}`;
   
@@ -68,7 +68,7 @@ console.log(createdMessage)
       const runStream = openai.beta.threads.runs.stream(threadI, {
         assistant_id: 'asst_kpGkkuylXDvYGGIEpSQTWM1d',
         stream: true,
-        truncation_strategy: { type: 'last_messages', last_messages: 5 }
+        truncation_strategy: { type: 'last_messages', last_messages: 3 }
       });
 
       let textDonePromise = new Promise<void>((resolve) => {
