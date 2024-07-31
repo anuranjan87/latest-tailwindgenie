@@ -32,7 +32,7 @@ export async function POST(req: Request, res: NextApiResponse) {
 
   let tailwindCSSLink: string;
   if (id) {
-    tailwindCSSLink = 'use uploaded image, Output only the tailwind cdn code and HTML code without Markdown syntax or additional formatting, hover effect. Add comments also in the code. All designs should be elegant and impressive';
+    tailwindCSSLink = 'use uploaded image, Output only the tailwind cdn code and HTML code without Markdown syntax or additional formatting, hover effect. Add comments also in the code. All designs should be elegant and impressive and create exact replica of the image nothing more or less, it has to be exact replica of uploaded image';
   } else {
     tailwindCSSLink = 'Output only the tailwind cdn code and HTML code without Markdown syntax or additional formatting, hover effect. Add comments also in the code. All designs should be elegant and impressive';
   }
@@ -68,7 +68,7 @@ console.log(createdMessage)
       const runStream = openai.beta.threads.runs.stream(threadI, {
         assistant_id: 'asst_kpGkkuylXDvYGGIEpSQTWM1d',
         stream: true,
-        truncation_strategy: { type: 'last_messages', last_messages: 3 }
+        truncation_strategy: { type: 'last_messages', last_messages: 5 }
       });
 
       let textDonePromise = new Promise<void>((resolve) => {
